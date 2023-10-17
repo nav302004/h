@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunt digital Media assigiment</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Modal  -->
+    <div class="App">
+
+        <div class="overlay">
+            <div class="modal">
+                <div class="modalcontainer">
+
+                    <header>
+                        <h3>Create new entry</h3>
+                    </header>
+                    <main>
+                        <div class="date_container">
+                            <div class="input_container">
+                                <p>Start date</p>
+                                <input type="date" class="startdate" />
+                            </div>
+                            <div class="input_container">
+                                <p>End date</p>
+                                <input type="date" class="enddate" />
+                            </div>
+                        </div>
+                        <div class="date_container">
+                            <div class="input_container">
+                                <p>Excluded date</p>
+                                <input type="date" class="excludedate" />
+                                <button class="adddate addexcludedate">
+                                    <img src="./assests/plus-circle.svg"> 
+                                    Add
+                                </button>
+                            </div>
+                            <div class="input_container">
+                                <p>Lead Count</p>
+                                <input type="number" />
+                            </div>
+                        </div>
+                        <div class="excludeddateshow">
+                            <!-- Its show all the excluded date -->
+                        </div>
+                        <div class="autocompletedinfo">
+                            <p>Auto complted details </p>
+                            <!-- <small>Year,Month : {miniumdate.slice(0, 7).replace("-", ",")}</small>
+                        <br />
+                        <small>Number of Days : {numberofday}</small> -->
+                        </div>
+                    </main>
+                    <footer>
+                        <div>
+                            <button class="cancel">Cancel</button>
+                            <button>Add entry</button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main body -->
+        <div class="table">
+
+            <!-- Its a utility section  -->
+            <div class="utility">
+                <div class="utility_search">
+                    <h3>DRR Report</h3>
+                    <p>Hunt Digital Media</p>
+                </div>
+                <div class="utility_button">
+                    <a href="">Report a bug</a>
+                    <button class="addnewentry">Add new</button>
+                </div>
+            </div>
+
+            <!-- Table data show section  -->
+            <div class="data-table">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- Table headers show here  -->
+                            <th class="sticky_prop">ID</th>
+                            <th>Action</th>
+                            <th>Start date</th>
+                            <th>End date</th>
+                            <th>Month,Year</th>
+                            <th>Dates Excluded</th>
+                            <th>Number of Days </th>
+                            <th>Lead Count</th>
+                            <th>Expected DRR</th>
+                            <th>Last Updated</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- {allentry.map(entry => {
+                        return (
+                        <React.Fragment key={Math.random()}>
+                            <tr>
+                                <td class="sticky_prop">{i++}</td>
+                                <td>-</td>
+                                <td>{entry.startdate ? entry.startdate:"-"}</td>
+                                <td>{entry.enddate ? entry.enddate :"-"}</td>
+                                <td>{entry.monthYear ? entry.monthYear :"-"}</td>
+                                <td>{entry.excludingdate.map(excl => `${excl}/`)}</td>
+                                <td>{entry.numbersofday ? entry.numbersofday :"-"}</td>
+                                <td>{entry.leadcount ? entry.leadcount :"-"}</td>
+                                <td>{Math.round(entry.leadcount / entry.numbersofday)}</td>
+                                <td>{entry.lastUpdated.date ? entry.lastUpdated.date :"-"} <br />
+                                    {entry.lastUpdated.time ? entry.lastUpdated.time :"-"}</td>
+                                <td><Button variant="outlined" color="error"
+                                        onClick={deleteHandler.bind(null,{start:entry.startdate,end:entry.enddate})}>
+                                        Delete
+                                    </Button></td>
+                            </tr>
+                        </React.Fragment>
+                        )
+                        })} -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./assests/jquery-3.7.1.min.js"></script>
+<script src="./script.js"></script>
+
+</html>
