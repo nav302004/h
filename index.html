@@ -35,29 +35,33 @@
                                 <p>Excluded date</p>
                                 <input type="date" class="excludedate" />
                                 <button class="adddate addexcludedate">
-                                    <img src="./assests/plus-circle.svg"> 
+                                    <img src="./assests/plus-solid.svg">
                                     Add
                                 </button>
                             </div>
                             <div class="input_container">
                                 <p>Lead Count</p>
-                                <input type="number" />
+                                <input type="number" class="leadcounter" />
                             </div>
                         </div>
-                        <div class="excludeddateshow">
-                            <!-- Its show all the excluded date -->
+
+                        <div class="parentExludedates">
+
+                            <div class="excludeddateshow">
+                                <!-- Its show all the excluded date -->
+                            </div>
                         </div>
                         <div class="autocompletedinfo">
-                            <p>Auto complted details </p>
+                            <p>Auto complete details </p>
                             <!-- <small>Year,Month : {miniumdate.slice(0, 7).replace("-", ",")}</small>
-                        <br />
-                        <small>Number of Days : {numberofday}</small> -->
+                        <br /> -->
+                            <small class="numberofdays"></small>
                         </div>
                     </main>
                     <footer>
                         <div>
                             <button class="cancel">Cancel</button>
-                            <button>Add entry</button>
+                            <button class="newentry">Add entry</button>
                         </div>
                     </footer>
                 </div>
@@ -99,7 +103,7 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="tablebody">
                         <!-- {allentry.map(entry => {
                         return (
                         <React.Fragment key={Math.random()}>

@@ -94,7 +94,7 @@ footer {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     font-size: 15px;
     border: 2px solid #164ba166;
     color: grey;
@@ -152,8 +152,14 @@ footer button:nth-child(2) {
     margin-bottom: 10px;
 }
 
-.excludeddateshow small {
+.excludedateitem img {
     display: inline-block;
+    width: 15px;
+    transform: translateY(4px);
+    padding-right: 4px;
+}
+
+.excludeddateshow small {
     width: fit-content;
     border: 1px solid #164ba166;
     color: grey;
@@ -269,6 +275,7 @@ table thead .sticky_prop {
     }
 
 }
+
 /* This css is only to give a center look to div */
 .App {
     margin-top: 5%;
@@ -281,4 +288,28 @@ small img {
 
 .excludeddateshow {
     z-index: -999999999999999;
+    transform: scale();
+}
+
+img {
+    width: 15px;
+}
+
+/* table button css */
+.bn17 {
+    font-family: lato, sans-serif;
+    font-weight: bold;
+    font-size: 0.90em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: rgb(209, 26, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px ;
+    position: relative;
+    border: 2px solid rgb(209, 26, 27);
+    border-radius: 20px;
+    cursor: pointer;
 }
